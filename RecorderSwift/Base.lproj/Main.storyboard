@@ -792,6 +792,9 @@
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="XK7-Vv-svf" name="value" keyPath="objectValue" id="tHU-1Y-XaY"/>
+                                                                    </connections>
                                                                 </textField>
                                                             </subviews>
                                                             <connections>
@@ -801,6 +804,11 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <action selector="Doubleclicked:" target="XfG-lQ-9wD" id="7pV-rK-QP1"/>
+                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="ICA-mx-IBw"/>
+                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="T53-es-Rqt"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -825,6 +833,7 @@
                         <outlet property="stopPlayingBTN" destination="Hic-yq-0f4" id="hfw-2C-WFU"/>
                         <outlet property="stopRecording" destination="ec3-Op-DiJ" id="PpT-z4-2AF"/>
                         <outlet property="stopRecordingBTN" destination="ec3-Op-DiJ" id="mXr-mg-r1f"/>
+                        <outlet property="tableView" destination="r6O-TO-DRd" id="ZOA-BO-fLo"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

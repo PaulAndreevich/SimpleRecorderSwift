@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+//import AppKit
 import AVFoundation
 import AVKit
 
@@ -17,17 +17,40 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     @IBOutlet weak var stopRecordingBTN: NSButton!
     @IBOutlet weak var playRecordBTN: NSButton!
     @IBOutlet weak var stopPlayingBTN: NSButton!
+    @IBOutlet weak var tableView: NSTableView!
     
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     
-    //let tableview: NSTableView!
+    var devices = ["cat","dog","mouse"]
     
-    //var yourArray = [String](
+    //Table Datasource
     
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        //NSLog("did change")
+    }
+    
+    override func awakeFromNib() {
+        let clSelector:Selector = #selector(DoubleClick)
+        tableView?.target = self
+        tableView?.doubleAction = clSelector
+    }
+    
+    @objc func DoubleClick(sender: AnyObject) {
+        NSLog(devices[tableView.selectedRow])
+    }
+    
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return devices.count
+    }
+    
+    func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
+        // NSLog("lol")
+        return devices[row]
+    }
     
     //let devices = AVCaptureDevice.devices(for: AVMediaType.audio)
-   // var capdev : AVCaptureDevice
+    // var capdev : AVCaptureDevice
     
     var fileName = "audioFile.m4a"
     
@@ -134,12 +157,9 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     
-    
-    
-
-
-    
 }
+
+
 
 
 
