@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		845A6609202CA27C004C7011 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845A6608202CA27C004C7011 /* AppKit.framework */; };
 		846F22C71FFD3A560036DCDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22C61FFD3A560036DCDC /* AppDelegate.swift */; };
 		846F22C91FFD3A560036DCDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22C81FFD3A560036DCDC /* ViewController.swift */; };
 		846F22CB1FFD3A560036DCDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846F22CA1FFD3A560036DCDC /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		845A6608202CA27C004C7011 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		846F22C31FFD3A560036DCDC /* RecorderSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecorderSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846F22C61FFD3A560036DCDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846F22C81FFD3A560036DCDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845A6609202CA27C004C7011 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		845A6607202CA27C004C7011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845A6608202CA27C004C7011 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		846F22BA1FFD3A560036DCDC = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +91,7 @@
 				846F22D81FFD3A560036DCDC /* RecorderSwiftTests */,
 				846F22E31FFD3A560036DCDC /* RecorderSwiftUITests */,
 				846F22C41FFD3A560036DCDC /* Products */,
+				845A6607202CA27C004C7011 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

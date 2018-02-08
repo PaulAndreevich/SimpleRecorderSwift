@@ -11,7 +11,7 @@ import Cocoa
 import AVFoundation
 import AVKit
 
-class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate{
+class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate, NSTableViewDataSource{
 
     @IBOutlet weak var startRecordingBTN: NSButton!
     @IBOutlet weak var stopRecordingBTN: NSButton!
@@ -21,12 +21,13 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     
+    //let tableview: NSTableView!
+    
+    //var yourArray = [String](
+    
     
     //let devices = AVCaptureDevice.devices(for: AVMediaType.audio)
    // var capdev : AVCaptureDevice
-    
-    //capdev.
-    
     
     var fileName = "audioFile.m4a"
     
