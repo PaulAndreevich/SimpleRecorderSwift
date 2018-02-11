@@ -23,6 +23,13 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     var soundPlayer : AVAudioPlayer!
     
     var devices = ["cat","dog","mouse"]
+    //NSLog("\n>\n");
+
+    //NSLog(">\n");
+    //temp = switchWrapperWrapper()
+
+    
+    
     
     //Table Datasource
     
@@ -50,12 +57,13 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     //let devices = AVCaptureDevice.devices(for: AVMediaType.audio)
-    // var capdev : AVCaptureDevice
+    //var capdev : AVCaptureDevice
     
     var fileName = "audioFile.m4a"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var temp: switchWrapperWrapper = switchWrapperWrapper();
         setupRecorder()
 
         // Do any additional setup after loading the view.
@@ -113,6 +121,7 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     @IBAction func startRecording(_ sender: Any) {
+        
         soundRecorder.record()
         startRecordingBTN.isEnabled = false
         playRecordBTN.isEnabled = false
@@ -120,6 +129,7 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     @IBAction func stopRecording(_ sender: Any) {
+       
         soundRecorder.stop()
         startRecordingBTN.isEnabled = true
         playRecordBTN.isEnabled = false
@@ -155,6 +165,7 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         startRecordingBTN.isEnabled = true
     }
+    
     
     
 }

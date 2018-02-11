@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		845A6609202CA27C004C7011 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845A6608202CA27C004C7011 /* AppKit.framework */; };
+		845A660D202DB17D004C7011 /* switch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 845A660C202DB17D004C7011 /* switch.cpp */; };
 		846F22C71FFD3A560036DCDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22C61FFD3A560036DCDC /* AppDelegate.swift */; };
 		846F22C91FFD3A560036DCDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22C81FFD3A560036DCDC /* ViewController.swift */; };
 		846F22CB1FFD3A560036DCDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846F22CA1FFD3A560036DCDC /* Assets.xcassets */; };
 		846F22CE1FFD3A560036DCDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846F22CC1FFD3A560036DCDC /* Main.storyboard */; };
 		846F22DA1FFD3A560036DCDC /* RecorderSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22D91FFD3A560036DCDC /* RecorderSwiftTests.swift */; };
 		846F22E51FFD3A560036DCDC /* RecorderSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846F22E41FFD3A560036DCDC /* RecorderSwiftUITests.swift */; };
+		84AA4486202F644600F62040 /* switchwrapperwrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4485202F644600F62040 /* switchwrapperwrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		845A6608202CA27C004C7011 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		845A660B202DB17D004C7011 /* RecorderSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecorderSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		845A660C202DB17D004C7011 /* switch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = switch.cpp; path = ../../ChooseMicLib/ChooseMicLib/switch.cpp; sourceTree = "<group>"; };
+		845A660E202DB7EC004C7011 /* switchwrapperwrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = switchwrapperwrapper.h; sourceTree = "<group>"; };
 		846F22C31FFD3A560036DCDC /* RecorderSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecorderSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		846F22C61FFD3A560036DCDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		846F22C81FFD3A560036DCDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +53,8 @@
 		846F22E01FFD3A560036DCDC /* RecorderSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecorderSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846F22E41FFD3A560036DCDC /* RecorderSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderSwiftUITests.swift; sourceTree = "<group>"; };
 		846F22E61FFD3A560036DCDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84AA4484202F588100F62040 /* switch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = switch.h; path = ../../ChooseMicLib/ChooseMicLib/switch.h; sourceTree = "<group>"; };
+		84AA4485202F644600F62040 /* switchwrapperwrapper.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = switchwrapperwrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +115,17 @@
 		846F22C51FFD3A560036DCDC /* RecorderSwift */ = {
 			isa = PBXGroup;
 			children = (
+				84AA4485202F644600F62040 /* switchwrapperwrapper.mm */,
+				84AA4484202F588100F62040 /* switch.h */,
+				845A660C202DB17D004C7011 /* switch.cpp */,
 				846F22C61FFD3A560036DCDC /* AppDelegate.swift */,
 				846F22C81FFD3A560036DCDC /* ViewController.swift */,
 				846F22CA1FFD3A560036DCDC /* Assets.xcassets */,
 				846F22CC1FFD3A560036DCDC /* Main.storyboard */,
 				846F22CF1FFD3A560036DCDC /* Info.plist */,
 				846F22D01FFD3A560036DCDC /* RecorderSwift.entitlements */,
+				845A660B202DB17D004C7011 /* RecorderSwift-Bridging-Header.h */,
+				845A660E202DB7EC004C7011 /* switchwrapperwrapper.h */,
 			);
 			path = RecorderSwift;
 			sourceTree = "<group>";
@@ -204,6 +216,7 @@
 				TargetAttributes = {
 					846F22C21FFD3A560036DCDC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					846F22D41FFD3A560036DCDC = {
@@ -269,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845A660D202DB17D004C7011 /* switch.cpp in Sources */,
 				846F22C91FFD3A560036DCDC /* ViewController.swift in Sources */,
 				846F22C71FFD3A560036DCDC /* AppDelegate.swift in Sources */,
+				84AA4486202F644600F62040 /* switchwrapperwrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RecorderSwift/RecorderSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -434,6 +450,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = paul.RecorderSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecorderSwift/RecorderSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -442,6 +460,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = RecorderSwift/RecorderSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -449,6 +468,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = paul.RecorderSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecorderSwift/RecorderSwift-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
