@@ -18,17 +18,13 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     @IBOutlet weak var playRecordBTN: NSButton!
     @IBOutlet weak var stopPlayingBTN: NSButton!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var CurrentDeviceLabel: NSTextFieldCell!
+    
     
     var soundRecorder : AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
-    
-    var devices = ["cat","dog","mouse"]
-    //NSLog("\n>\n");
-
-    //NSLog(">\n");
-    //temp = switchWrapperWrapper()
-
-    
+    var theSwitch: switchWrapperWrapper!
+    var devices = [String]()
     
     
     //Table Datasource
@@ -44,7 +40,8 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     @objc func DoubleClick(sender: AnyObject) {
-        NSLog(devices[tableView.selectedRow])
+        NSLog("here")
+        //NSLog(devices[tableView.selectedRow])
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -61,11 +58,26 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     
     var fileName = "audioFile.m4a"
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        var temp: switchWrapperWrapper = switchWrapperWrapper();
         setupRecorder()
-
+        theSwitch = switchWrapperWrapper()
+        let curDev = theSwitch.getCurrentInputDevice()
+        
+        // setting the current mic
+        let currentMicName = String(cString: theSwitch.getCurrentInputDevice())
+        CurrentDeviceLabel.stringValue = currentMicName
+        
+        theSwitch.findAllInputDevices()
+        theSwitch.initializeDeviceIterator()
+        
+        while(theSwitch.iteratorEnded() != true){
+            devices.append(String(cString: theSwitch.value()));
+            theSwitch.advanceDeviceIterator()
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
 

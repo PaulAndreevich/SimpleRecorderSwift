@@ -115,9 +115,10 @@
 		846F22C51FFD3A560036DCDC /* RecorderSwift */ = {
 			isa = PBXGroup;
 			children = (
-				84AA4485202F644600F62040 /* switchwrapperwrapper.mm */,
-				84AA4484202F588100F62040 /* switch.h */,
 				845A660C202DB17D004C7011 /* switch.cpp */,
+				84AA4484202F588100F62040 /* switch.h */,
+				84AA4485202F644600F62040 /* switchwrapperwrapper.mm */,
+				845A660E202DB7EC004C7011 /* switchwrapperwrapper.h */,
 				846F22C61FFD3A560036DCDC /* AppDelegate.swift */,
 				846F22C81FFD3A560036DCDC /* ViewController.swift */,
 				846F22CA1FFD3A560036DCDC /* Assets.xcassets */,
@@ -125,7 +126,6 @@
 				846F22CF1FFD3A560036DCDC /* Info.plist */,
 				846F22D01FFD3A560036DCDC /* RecorderSwift.entitlements */,
 				845A660B202DB17D004C7011 /* RecorderSwift-Bridging-Header.h */,
-				845A660E202DB7EC004C7011 /* switchwrapperwrapper.h */,
 			);
 			path = RecorderSwift;
 			sourceTree = "<group>";

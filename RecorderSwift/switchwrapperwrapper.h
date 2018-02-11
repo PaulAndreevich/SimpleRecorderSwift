@@ -12,14 +12,16 @@
 #import <Foundation/Foundation.h>
 
 
-struct switchWrapper;
+struct SwitchWrapper;
 
 @interface switchWrapperWrapper: NSObject {
-    struct switchWrapper *switchwrapper;
+    struct SwitchWrapper *switchwrapper;
 }
 
 - (id) init;
+- (void) printHello;
 - (void) dealloc;
+- (int *) getCurrentDeviceNameLength;
 - (void) findAllInputDevices;
 - (const char *) getCurrentInputDevice;
 - (void) setDevice: (char*) requestedname;
