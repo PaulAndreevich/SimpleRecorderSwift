@@ -40,7 +40,19 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     }
     
     @objc func DoubleClick(sender: AnyObject) {
-        NSLog("here")
+        //NSLog("here")
+        
+       // var i: UInt8 = UInt8.init()!
+       // let up: UnsafeMutablePointer<UInt8> = UnsafeMutablePointer<UInt8>.init(&i)
+       // let down: UnsafeMutablePointer<UInt8>! = up;
+        
+        theSwitch.setDevice(devices[tableView.selectedRow])
+        
+        let currentMicName = String(cString: theSwitch.getCurrentInputDevice())
+        
+        if (currentMicName == devices[tableView.selectedRow]) {
+            CurrentDeviceLabel.stringValue = currentMicName
+        }
         //NSLog(devices[tableView.selectedRow])
     }
     
@@ -63,7 +75,6 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         super.viewDidLoad()
         setupRecorder()
         theSwitch = switchWrapperWrapper()
-        let curDev = theSwitch.getCurrentInputDevice()
         
         // setting the current mic
         let currentMicName = String(cString: theSwitch.getCurrentInputDevice())
@@ -76,6 +87,7 @@ class ViewController: NSViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
             devices.append(String(cString: theSwitch.value()));
             theSwitch.advanceDeviceIterator()
         }
+        
         
         
         // Do any additional setup after loading the view.

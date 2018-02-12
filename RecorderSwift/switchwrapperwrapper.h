@@ -24,7 +24,7 @@ struct SwitchWrapper;
 - (int *) getCurrentDeviceNameLength;
 - (void) findAllInputDevices;
 - (const char *) getCurrentInputDevice;
-- (void) setDevice: (char*) requestedname;
+- (void) setDevice: (const char*) requestedname;
 - (const char*) value;
 - (void) initializeDeviceIterator;
 - (void) advanceDeviceIterator;
